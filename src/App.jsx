@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import RecipeList from './components/RecipeList';
 
 const App = () => {
@@ -20,7 +22,13 @@ const App = () => {
 
 	return (
 		<>
+			<Navbar title='OpenRecipe' />
 			<RecipeList recipes={recipes} />
+			<Footer
+				author='Justine Licuanan'
+				link='github.com/justinelicuanan'
+				year='2020'
+			/>
 		</>
 	);
 };
