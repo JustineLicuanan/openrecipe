@@ -1,6 +1,107 @@
+/* Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+/* Variable */
+:root {
+	--primaryColor: #5cdb95;
+	--secondaryColor: #05386b;
+	--tertiaryColor: #379683;
+	--darkColor: #333;
+	--lightColor: #edf5e1;
+	--primaryBgcTextColor: var(--secondaryColor);
+}
+
+/* Reboot */
 * {
 	padding: 0;
 	margin: 0;
-	font-family: sans-serif;
+	font-family: 'Noto Sans JP', sans-serif;
 	box-sizing: border-box;
+}
+body {
+	background-color: var(--primaryColor);
+	color: var(--darkColor);
+	line-height: 1.6;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: var(--darkColor);
+}
+img {
+	width: 100%;
+}
+h1,
+h2 {
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 10px 0;
+}
+
+/* Main style */
+.recipe-list .grid {
+	grid-template-columns: repeat(3, 1fr);
+	padding: 20px 0;
+}
+.recipe-list .card {
+	height: 100%;
+	padding: 0;
+	overflow: hidden;
+}
+.recipe-list .card > a,
+.recipe-list .container div a:first-child {
+	color: var(--primaryColor);
+	transition: color 0.3s;
+}
+.recipe-list .container div a:first-child:hover {
+	color: var(--tertiaryColor);
+}
+.recipe-list .card div {
+	padding: 20px;
+}
+.recipe-list .card div ul {
+	margin-bottom: 20px;
+}
+
+/* Utilities */
+/* Button */
+.btn {
+	display: inline-block;
+	padding: 10px 30px;
+	cursor: pointer;
+	background-color: var(--primaryColor);
+	color: var(--primaryBgcTextColor);
+	border: none;
+	border-radius: 5px;
+}
+.btn:hover {
+	transform: scale(0.98);
+}
+
+/* Card */
+.card {
+	background-color: var(--secondaryColor);
+	color: var(--lightColor);
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	padding: 20px;
+	margin: 10px;
+}
+
+/* Container */
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 40px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	height: 100%;
 }
